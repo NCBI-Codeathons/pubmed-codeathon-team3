@@ -3,11 +3,11 @@
 
 ## Team
 - Vasileios Alevizos
-- Susan Schmidt
-- Kate Majewski
-- Sarah Nabulsi
-- Aidy Weeks
-- Brandon Patterson
-- Erin Ware
 - Helen-Ann Epstein
 - Hacer Karamese
+- Kate Majewski
+- Sarah Nabulsi
+- Brandon Patterson
+- Susan Schmidt
+- Erin Ware
+- Aidy Weeks
