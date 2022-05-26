@@ -1,3 +1,5 @@
+#Find articles by PMID
+
 library(dplyr)
 library(RISmed)
 library(rentrez)
@@ -26,13 +28,13 @@ for (i in 1:length(sort_group_date)){
 
 
 #use rentrez package to retrieve info by pmid. This is alternative to RISmed package
-set_entrez_key("debe10da1ec3306e9dd4a5f07a700d818208")
-Sys.getenv("debe10da1ec3306e9dd4a5f07a700d818208")
+set_entrez_key("API_key") # follow the instructions to get one https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/
+Sys.getenv("API_key")
 pubmed_date<-list()
 records_date<-list()
 for (i in 1:length(pmIDs_date)){
-  records_date[[i]]<-entrez_summary(pmIDs_date[[i]],type="efetch",db="pubmed", api_key="debe10da1ec3306e9dd4a5f07a700d818208") #retrieve the info for each PMID
-  Sys.sleep(0.3)
+  records_date[[i]]<-entrez_summary(pmIDs_date[[i]],type="efetch",db="pubmed", api_key="API_key") #retrieve the info for each PMID
+  Sys.sleep(0.3)# put the system sleep to comply with NCBI limits
 }
 
 
@@ -58,13 +60,11 @@ for (i in 1:length(sort_group_rel)){
 
 
 #use rentrez package to retrieve info by pmid. This is alternative to RISmed package
-set_entrez_key("debe10da1ec3306e9dd4a5f07a700d818208")
-Sys.getenv("debe10da1ec3306e9dd4a5f07a700d818208")
 pubmed_rel<-list()
 records_rel<-list()
 for (i in 1:length(pmIDs_rel)){
-  records_rel[[i]]<-entrez_summary(pmIDs_rel[[i]],type="efetch",db="pubmed", api_key="debe10da1ec3306e9dd4a5f07a700d818208") #retrieve the info for each PMID
-  Sys.sleep(0.3)
+  records_rel[[i]]<-entrez_summary(pmIDs_rel[[i]],type="efetch",db="pubmed", api_key="API_key") #retrieve the info for each PMID
+  Sys.sleep(0.3) # put the system sleep to comply with NCBI limits
 }
 
 
