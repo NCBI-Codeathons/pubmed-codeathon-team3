@@ -13,7 +13,7 @@ You’ll want to follow the workflow listed under the Methods section below.
 The null hypothesis is that, in comparing a random sample of searches using Best Match sort to a random sample of searches using Date Order sort, the difference in the frequency distribution of unique journal titles is insignificant.
 
 ## Methods:
-- Workflow
+- Data workflow for NCBI data
   - Filter the data  file provided by NCBI with regards to 
     - query_term:  “cancer” or “neoplasm”
     - sort_algorithm : “date” or “relevance”
@@ -23,6 +23,9 @@ The null hypothesis is that, in comparing a random sample of searches using Best
   - Use rentrez R package to retrieve information (Publication year, journal, language, title) for each the PMIDs of interest.
   - Summarize the data by sort_algorithm, publication year, and journal
   - Visualize the results
+- Data workflow for live query
+  - MeSH/Query conducted the following search “neoplasm OR cancer” to review granular data within the live PubMed environment
+    - first 20 results of the Best Match and the first 20 results of the Most Recent were exported 
 
 ## Outcomes:
 There appears to be a significant difference in frequency distribution of journal titles between Best Match and Date sort order. The frequency distribution of journal titles in date order is significantly skewed, where a Best Match sort order seems to favor a set of journals. The relevance sort may represent a higher diversity of journal titles in the first ten results than the date sort.
